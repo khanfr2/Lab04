@@ -24,6 +24,7 @@ public class Lab4{
 
 	public static void method(int[] x){
       int[] newArray = new int[x.length]; 
+      System.arraycopy(x, 0, newArray, 0, x.length); 
       int temp = 0; 
 		for(int i=0; i<newArray.length-1; i++){
 			for(int j=i+1; j<newArray.length; j++){
