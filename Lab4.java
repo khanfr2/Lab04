@@ -23,18 +23,19 @@ public class Lab4{
 	}
 
 	public static void method(int[] x){
+      int[] newArray = new int[x.length]; 
       int temp = 0; 
-		for(int i=0; i<x.length-1; i++){
-			for(int j=i+1; j<x.length; j++){
-            if(x[i] < x[j]){
-               temp = x[j]; 
-               x[j] = x[i]; 
-               x[i] = temp; 
+		for(int i=0; i<newArray.length-1; i++){
+			for(int j=i+1; j<newArray.length; j++){
+            if(newArray[i] < newArray[j]){
+               temp = newArray[j]; 
+               newArray[j] = newArray[i]; 
+               newArray[i] = temp; 
             }
 			}
 		}	
 		//print out new array
-      for(int item: x){
+      for(int item: newArray){
          System.out.println(item); 
       }
 	}
